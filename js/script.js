@@ -12,6 +12,7 @@ async function buscarClima(cidade) {
   const dados = await resposta.json();
   console.log(dados);
   previsao(dados);
+  grid.style.display = "grid";
 }
 
 function previsao(dados){
