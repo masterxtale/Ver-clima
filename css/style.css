@@ -72,12 +72,53 @@ body{
     font-weight: bold;
 }
 
-.humidade{
+.umidade{
     color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size: 1rem;
+    font-weight: bold;
 }
-.humidade-conteiner{
+.umidade-conteiner{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+    justify-content: center; /* 🔥 isso resolve */
+    align-items: center;
+    gap: 5px;
+}
+
+.secao{
+    margin: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 1rem;
+}
+
+#cidade1{
+    display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    border-radius: 10px 0px 0 10px;
+    width: 20rem;
+}
+#consulta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    border-radius: 0px 10px 10px 0px;
+}
+.status-conteiner{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center; /* 🔥 isso resolve */
+    align-items: center;
+    gap: 5px;
 }
