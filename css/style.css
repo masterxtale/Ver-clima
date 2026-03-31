@@ -5,35 +5,38 @@
     font-size: 1.5rem;
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(77, 143, 213);
     margin: 0;
     color: rgb(0, 0, 0);
+}
+
+body{
+    background-image: url("../img/v1015-104a.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
 #container{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20rem;
-    background-color: rgb(255, 255, 255);
+    height: 5rem;
 }
 
-#geral{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: black;   
-}
 #grid{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(5, 12rem);
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
     padding: 10px;
-    background-color: rgb(77, 143, 213);
+    background-color: rgba(85, 151, 222, 0.786);
     border: white solid 1px;
     border-radius: 10px;
     height: auto;
+    width: 59rem;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0.6);
 }
 
 #resultado{
@@ -41,7 +44,40 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    padding: 5px;
     color: rgb(0, 0, 0);
     font-family: Arial;
+    margin: 1rem;
+}
+
+.dia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    border-bottom: 0.2rem solid rgb(255, 255, 255);
+    font-weight: bold;
+}
+.temp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    gap:5px;
+}
+.temp1{
+    font-weight: bold;
+}
+
+.humidade{
+    color: rgb(0, 0, 0);
+}
+.humidade-conteiner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
 }
