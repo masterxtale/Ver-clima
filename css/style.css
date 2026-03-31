@@ -17,3 +17,31 @@
     height: 20rem;
     background-color: rgb(255, 255, 255);
 }
+
+#geral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;   
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(77, 143, 213);
+    border: white solid 1px;
+    border-radius: 10px;
+    height: auto;
+}
+
+#resultado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+}
