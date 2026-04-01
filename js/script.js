@@ -1,9 +1,7 @@
 document.getElementById("consulta").addEventListener("click", function() {
   const cidade = document.getElementById("cidade1").value;
-
   const resultado = document.getElementById("resultado");
   resultado.innerHTML = "Cidade: " + cidade;
-
   buscarClima(cidade);
 });
 
@@ -38,9 +36,6 @@ function previsao(dados){
     });
     diaSemana = diaSemana.replace(".", "");
     document.getElementById("dia" + dia).innerHTML = diaSemana;
-
-    
-
     document.getElementById("umidade" + dia).innerHTML = dados.list[i].main.humidity + "%";
     document.getElementById("status" + dia).innerHTML = dados.list[i].weather[0].description;
 
