@@ -1,7 +1,16 @@
+document.getElementById("cidade1").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    const cidade = document.getElementById("cidade1").value;
+    const resultado = document.getElementById("resultado");
+     resultado.innerHTML = cidade.toUpperCase();
+    buscarClima(cidade);
+  }
+});
+
 document.getElementById("consulta").addEventListener("click", function() {
   const cidade = document.getElementById("cidade1").value;
   const resultado = document.getElementById("resultado");
-  resultado.innerHTML = "Cidade: " + cidade;
+  resultado.innerHTML = cidade.toUpperCase();
   buscarClima(cidade);
 });
 

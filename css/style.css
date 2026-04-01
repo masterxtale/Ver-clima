@@ -3,13 +3,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    padding: 10px 5px;
-    margin: 0;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
 
+    position: sticky; /* 🔥 fica no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+
+    height: 60px;
+    width: 100%;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    background: rgba(255, 255, 255, 0.2); /* glass */
+    backdrop-filter: blur(10px); /* 🔥 efeito moderno */
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    letter-spacing: 1px;
+}
 /* ===== BODY ===== */
 body {
     display: flex;
@@ -18,7 +29,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: url("../img/v1015-104a.jpg");
+    background-image: url("../img/sam-ferrara-1527pjeb6jg-unsplash.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,11 +63,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 3rem;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    margin: 1.2rem 0;
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
+    margin: 1rem 0;
+    text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.501);
 }
 
 /* ===== CARD ===== */
@@ -66,7 +77,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(0, 142, 171, 0.25);
+    background: rgba(0, 143, 171, 0.405);
     backdrop-filter: blur(12px);
     border-radius: 14px;
     width: 100%;
@@ -74,7 +85,7 @@ body {
     min-height: 210px;
     padding: 12px;
     gap: 12px;
-    border: 2px solid rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(0, 0, 0, 0.263);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3),
                 0 0 15px rgba(255, 255, 255, 0.25);
     transition: transform 0.2s ease;
@@ -161,7 +172,7 @@ body {
     border: none;
     border-radius: 0 10px 10px 0;
     background: rgba(0, 142, 171, 0.9);
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -178,7 +189,7 @@ body {
 /* ===== FUNDO DO GRID ===== */
 #gridExterno {
     display: none;
-    background-color: rgba(36, 36, 36, 0.28);
+    background-color: rgba(177, 177, 177, 0.477);
     padding: 20px;
     border-radius: 22px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
