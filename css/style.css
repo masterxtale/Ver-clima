@@ -1,124 +1,187 @@
-#titulo{
+/* ===== TÍTULO ===== */
+#titulo {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 5px;
     margin: 0;
     color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
-body{
-    background-image: url("../img/v1015-104a.jpg");
-    background-size: cover;
+/* ===== BODY ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+    background-image: url("../img/v1015-104a.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* opcional - fica mais bonito */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#container{
+/* ===== CONTAINER DO INPUT ===== */
+#container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 5rem;
+    width: 100%;
+    margin: 15px 0;
 }
 
-#grid{
+/* ===== GRID PRINCIPAL ===== */
+#grid {
     display: none;
-    grid-template-columns: repeat(5, 12rem);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* mais responsivo */
     justify-content: center;
-    align-items: center;
-    gap: 0px;
-    padding: 10px;
-    background-color: rgba(31, 139, 255, 0.814);
-    border: rgba(255, 255, 255, 0.429) solid 2px;
-    border-radius: 10px;
-    height: auto;
-    width: 59rem;
+    gap: 15px;
+    padding: 20px 10px;
+    max-width: 1100px;
     margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0.6);
 }
 
-#resultado{
+/* ===== RESULTADO ===== */
+#resultado {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
     color: rgb(0, 0, 0);
-    font-family: Arial;
-    margin: 1rem;
+    margin: 1.2rem 0;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
 }
 
-.dia{
+/* ===== CARD ===== */
+.geral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(0, 142, 171, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    width: 100%;
+    max-width: 180px;
+    min-height: 210px;
+    padding: 12px;
+    gap: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3),
+                0 0 15px rgba(255, 255, 255, 0.25);
+    transition: transform 0.2s ease;
+}
+
+.geral:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== DIA ===== */
+.dia {
+    background: rgba(0, 98, 118, 0.35);
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== ÍCONE ===== */
+.icone {
+    width: 65px;
+    height: 65px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px 0;
+}
+
+/* ===== TEMPERATURA ===== */
+.temp {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
-    color: rgb(0, 0, 0);
-    font-family: Arial;
-    border-bottom: 0.2rem solid rgb(255, 255, 255);
+    gap: 6px;
+    font-size: 1.45rem;
+}
+
+.temp1 {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+/* ===== UMIDADE ===== */
+.umidade {
+    font-size: 1.05rem;
     font-weight: bold;
 }
-.temp{
+
+.umidade-conteiner {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    color: rgb(0, 0, 0);
-    font-family: Arial;
-    gap:5px;
-}
-.temp1{
-    font-weight: bold;
+    gap: 6px;
 }
 
-.umidade{
-    color: rgb(0, 0, 0);
-    font-family: Arial;
-    font-size: 1rem;
-    font-weight: bold;
-}
-.umidade-conteiner{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center; /* 🔥 isso resolve */
-    align-items: center;
-    gap: 5px;
-}
-
-.secao{
-    margin: 0;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    font-size: 1rem;
-}
-
-#cidade1{
+/* ===== STATUS ===== */
+.status-conteiner {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
-    padding: 0.5rem;
-    color: rgb(0, 0, 0);
-    font-family: Arial;
-    border-radius: 10px 0px 0 10px;
-    width: 20rem;
+    gap: 6px;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 0.95rem;
 }
-#consulta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* ===== CAMPO DE BUSCA ===== */
+#cidade1 {
+    padding: 12px 16px;
     font-size: 1rem;
-    padding: 0.5rem;
-    color: rgb(0, 0, 0);
-    font-family: Arial;
-    border-radius: 0px 10px 10px 0px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.9);
 }
-.status-conteiner{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center; /* 🔥 isso resolve */
-    align-items: center;
-    gap: 5px;
+
+#consulta {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background: rgba(0, 142, 171, 0.9);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#consulta:hover {
+    background: rgb(0, 120, 150);
+}
+
+/* ===== ÍCONES DEFAULT ===== */
+#icone1, #icone2, #icone3, #icone4, #icone5 {
+    background-image: url("../img/v1015-104a.jpg");
+}
+
+/* ===== FUNDO DO GRID ===== */
+#gridExterno {
+    display: none;
+    background-color: rgba(36, 36, 36, 0.28);
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+    width: 70rem;
 }
